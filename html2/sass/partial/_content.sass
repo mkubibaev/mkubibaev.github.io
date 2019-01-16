@@ -1,0 +1,748 @@
+.header
+	border-top: 4px solid #4c4c4c
+	&__top-line
+		min-height: 38px
+		background: #f4f4f4
+	&__region
+		text-align: left
+		font-size: 16px
+		line-height: 38px
+		border-bottom: 1px dashed #0094d9
+		position: relative
+		margin-left: 20px
+		&:hover
+			border-color: transparent
+		&::before
+			content: ""
+			+position(50%,auto,auto,-25px)
+			width: 24px
+			height: 22px
+			margin-top: -11px
+			background: url(../img/ics-lk.png) 0 0 no-repeat
+		+sm_max
+			font-size: 14px
+	&__user
+		float: right
+		& a
+			display: inline-block
+			margin-left: 15px
+			font-size: 16px
+			line-height: 38px
+			padding-left: 30px
+			position: relative
+			&:hover
+				text-decoration: underline
+			&::before
+				content: ""
+				display: block
+				+position(50%,auto,auto,0)
+				margin-top: -11px
+				width: 24px
+				height: 22px
+				background: url(../img/ics-lk.png) no-repeat
+				background-position: 0 0
+			&.user-login
+				&::before
+					background-position: -24px 0
+			&.user-reg
+				&::before
+					background-position: -48px 0
+			+sm_max
+				font-size: 14px			
+			+xs_max
+				margin-left: 10px
+				font-size: 0	
+	&__inner
+		min-height: 102px
+		padding-top: 12px
+	&__logo
+		+lg_min
+			padding-left: 0
+			padding-right: 0
+		+sm_max
+			padding-top: 15px	
+		+xs_max
+			padding-top: 25px
+			margin-bottom: 10px
+		& img
+			display: block
+			width: 100%
+			height: auto
+			max-width: 191px
+			+sm_max
+				margin: 0 auto
+			+xs_max	
+				max-width: 170px
+	&__phone
+		padding-top: 10px
+		text-align: right
+		+sm_max
+			margin-bottom: 15px
+		& .phone
+			display: inline-block
+		& .backcall
+			padding-top: 10px
+			float: right
+			margin-left: 30px
+			+sm_max
+				float: none
+				margin-left: 0
+			& a
+				+md_max
+					font-size: 14px
+					padding-right: 15px
+					padding-left: 40px				
+				+xs_max
+					font-size: 13px
+					padding: 0 10px
+					&::before
+						display: none	
+
+.phone
+	text-align: right
+	&__link
+		font-size: 35px
+		color: #4c4c4c
+		display: inline-block
+		line-height: 1
+		+md_max
+			font-size: 26px
+		+xs_max
+			font-size: 20px	
+		&::before
+			content: ""
+			+position(50%,auto,auto,0)
+			width: 10px
+			height: 19px
+			margin-top: -10px
+			background: url(../img/ic-phone.png) 0 0 no-repeat
+	&__link-sm
+		color: #4c4c4c
+		font-size: 20px
+		display: inline-block
+
+.backcall
+	& a
+		display: inline-block
+		font-size: 18px
+		line-height: 37px
+		padding: 0 18px 0 45px
+		background: #4c4c4c
+		color: #fff
+		@extend %ff_PFDbold
+		border-radius: 10px
+		position: relative
+		transition: all 0.2s
+		&::before
+			content: ""
+			display: block
+			+position(50%,auto,auto,16px)
+			width: 14px
+			height: 22px
+			margin-top: -11px
+			background: url(../img/ic-phone.png) 0 0 no-repeat
+		&:hover
+			background: #2d2d2d	
+
+.cart
+	display: block
+	max-width: 160px
+	height: 45px
+	margin-top: 11px
+	padding-left: 55px
+	padding-top: 2px
+	position: relative
+	color: #4c4c4c
+	font-size: 16px
+	float: right	
+	&::before
+		content: ""
+		display: block
+		width: 45px
+		height: 45px
+		border-radius: 50%
+		background: #fff
+		+position(0,auto,auto,0)				
+	&::after
+		content: ""
+		display: block
+		width: 28px
+		height: 30px
+		+position(50%,auto,auto,10px)
+		margin-top: -12px
+		background: url(../img/ic-cart.png) 0 0 no-repeat
+	+xs_max
+		padding-left: 45px
+		width: 45px	
+	&__text
+		+lg_max
+			font-size: 0	
+	&__sum
+		color: #0094d9
+		+lg_max
+			font-size: 16px!important
+		+md_max
+			font-size: 12px!important
+		+xs_max
+			display: none		
+	
+.search-form
+	padding-top: 15px
+	position: relative
+	+sm_max
+		padding-left: 80px
+	&__inp
+		position: relative
+		width: 100%
+		height: 37px
+		display: inline-block
+		+lg_max
+			width: 100%
+		& input
+			width: 100%
+			height: 37px
+			border: none
+			padding: 0 40px 0 16px
+			font-size: 14px
+			border-radius: 10px
+		& button
+			border: none
+			outline: none
+			+position(3px,0,auto,auto)
+			width: 40px
+			height: 30px
+			background: url(../img/ic-search.png) 50% no-repeat
+			z-index: 11	
+
+.main-nav
+	position: relative
+	min-height: 66px
+	padding: 0
+	background: #e8c90d
+	&__list
+		padding: 0
+		margin: 0
+		text-align: left
+		+md_min
+			display: block!important
+		+md_max
+			+position(66px,auto,auto,0)
+			display: none
+			width: 100%
+			background: #4c4c4c
+			padding: 10px 15px
+			z-index: 110	
+		& li
+			display: inline-block
+			margin: 0 -4px 0 0
+			padding-top: 13px
+			&:last-child
+				margin-right: 0
+			+md_max
+				display: block
+				margin: 0
+				border: none
+				padding: 0
+			& a
+				display: block
+				font-size: 14px
+				line-height: 40px
+				margin-right: 20px
+				color: #010000
+				@extend %ff_PFDbold
+				text-transform: uppercase
+				transition: all 0.2s
+				&:hover
+					color: #fff
+				+lg_max
+					margin-right: 15px		
+				+md_max
+					font-size: 14px
+					margin: 0
+					display: block
+					line-height: 44px
+					color: #fff
+					padding-left: 15px
+					&:hover
+						background: #e8c90d
+						color: #4c4c4c	
+
+.menu-btn
+	position: relative
+	z-index: 100
+	+md_max
+		width: 66px
+		height: 66px
+		+position(0,auto,auto,0)
+		cursor: pointer
+		background: #4c4c4c
+	& span	
+		+md_max
+			display: block
+			width: 22px
+			height: 2px
+			background: $white
+			+position(50%,auto,auto,50%)
+			margin: -1px 0 0 -11px
+			&::before, &::after
+				content: ""
+				+position(-7px,auto,auto,0)
+				display: block
+				width: 22px
+				height: 2px
+				background: $white
+				transition: all 0.2s
+			&::after
+				top: 7px
+	&.is-active
+		& span
+			+md_max
+				background: transparent
+				&::before
+					transform: rotate(45deg)
+					top: 0
+				&::after
+					transform: rotate(-45deg)
+					top: 0
+
+
+.main-slider
+	width: 100%
+	height: 538px
+	position: relative
+	z-index: 10
+	&::after
+		content: ""
+		display: block
+		+position(100%,auto,auto,50%)
+		width: 1110px
+		height: 16px
+		margin-left: -555px
+		background: url(../img/slider-sh.png) 0 0 no-repeat
+		z-index: 11
+	& .slick-list
+		height: 100%
+		width: 100%
+	& .slick-track
+		height: inherit
+		width: 100%
+	& .slick-dots
+		display: block
+		list-style: none
+		text-align: center
+		+position(auto,auto,18px,auto)
+		width: 100%
+		padding: 0
+		z-index: 11
+		& li
+			display: inline-block
+			margin: 0 6px
+			&.slick-active
+				& button
+					background: #fff
+		& button
+			font-size: 0
+			outline: none
+			padding: 0
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background: transparent
+			border: 2px solid #fff						
+	.slide
+		width: 100%
+		background-size: cover
+		background-position: 50% 0
+		position: relative
+		color: #fff
+		outline: none
+		z-index: 2
+		text-align: center
+		&__btn
+			display: inline-block
+			font-size: 20px
+			border: 2px solid #fff
+			padding: 15px 35px
+			border-radius: 9px
+			text-transform: uppercase
+			color: #fff
+			transition: all 0.2s
+			outline: none
+			&:hover
+				background: rgba(255,255,255,0.3)
+			+md_max
+				font-size: 18px
+
+
+.promo-prod
+	margin-top: 42px
+	margin-bottom: 22px
+	+lg_max
+		margin-top: 60px
+	&__img
+		width: 24.32%
+		float: left
+		& img
+			display: block
+			width: 100%
+			height: auto
+			+md_max
+				max-width: 170px
+				margin: 0 auto
+		+md_max
+			width: 40%
+	&__discount	
+		width: 25.6%
+		float: left
+		font-family: 'Exo 2', sans-serif
+		text-align: center
+		text-transform: uppercase
+		padding-top: 34px
+		+md_max
+			width: 60%
+			text-align: left
+			padding-top: 15px
+		+xs_max
+			text-align: center	
+		& span
+			display: block
+			font-size: 70px
+			color: #fff
+			font-weight: 600
+			line-height: 1
+			+lg_max
+				font-size: 56px
+			+xs_max
+				font-size: 46px	
+			& span
+				font-size: 106px
+				color: #e8c90d
+				font-weight: 800
+				line-height: 1
+				+lg_max
+					font-size: 84px
+				+xs_max
+					font-size: 70px	
+	&__logo
+		width: 23%
+		float: left
+		padding-top: 50px
+		+md_max
+			width: 40%
+			clear: left
+			padding-top: 20px
+		+xs_max
+			display: none	
+		& img
+			display: block
+			width: 100%
+			height: auto
+			+md_max
+				max-width: 170px
+				margin: 0 auto
+	&__txt
+		width: 27%
+		float: left
+		font-size: 24px
+		padding-top: 90px
+		text-align: left
+		+lg_max
+			font-size: 22px
+		+md_max
+			width: 60%
+			padding-top: 45px
+		+xs_max
+			clear: left
+			float: none
+			width: 100%
+			text-align: center
+			padding-top: 25px					
+.catalog	
+	padding: 45px 0 10px
+	position: relative
+	z-index: 1
+	background: #f4f4f4
+	&::before
+		content: ""
+		display: block
+		width: 100%
+		height: 231px
+		+position(0,auto,auto,0)
+		background: url(../img/catalog-bg.jpg) 50% 0 no-repeat
+		background-size: cover
+	& .section-title
+		color: #fff
+		margin-bottom: 50px
+
+.catalog-items
+	+lg_min
+		padding-left: 0
+		padding-right: 0
+.catalog-item
+	display: block
+	max-width: 156px
+	text-align: center
+	margin: 0 auto 40px
+	&__wrap
+		+lg_min
+			-webkit-box-flex: 0
+			-webkit-flex: 0 0 14.2857%
+			-ms-flex: 0 0 14.2857%
+			flex: 0 0 14.2857%
+			max-width: 14.2857%
+			padding-left: 8px
+			padding-right: 8px	
+	&__img
+		display: block
+		background: #fff
+		border: 1px solid #e8e8e8
+		margin-bottom: 15px
+		transition: all 0.2s
+		& img
+			display: block
+			width: 100%
+			max-width: 140px
+			height: auto
+			margin: 0 auto
+	&__txt
+		display: inline-block
+		color: #2b2b2b
+		font-size: 14px
+		@extend %ff_PFDbold
+		min-height: 34px
+		text-transform: uppercase
+		transition: all 0.2s
+	&:hover
+		& .catalog-item__img
+			background: #2d2d2d
+			border-color: #2d2d2d 
+		& .catalog-item__txt
+			color: #0094d9
+
+.brands
+	padding: 47px 0 60px
+	& .section-title
+		margin-bottom: 40px	
+	&__slider
+		padding: 0 50px
+		+xs_max
+			padding: 0 40px
+	& .slick-prev
+		width: 33px
+		height: 26px
+		border: none
+		outline: none
+		overflow: hidden
+		font-size: 0
+		+position(50%,auto,auto,0)
+		margin-top: -13px
+		z-index: 98
+		cursor: pointer
+		background: url(../img/slider-arrows.png) 0 0 no-repeat
+		background-size: cover
+		&:hover
+			background-position: 0 -27px					
+	& .slick-next
+		@extend .slick-prev
+		+position(50%,0,auto,auto)
+		margin-left: auto
+		-webkit-transform: rotate(180deg)
+		-moz-transform: rotate(180deg)
+		-ms-transform: rotate(180deg)
+		-o-transform: rotate(180deg)
+		transform: rotate(180deg)
+	& .brand
+		outline: none
+		& img
+			display: block
+			margin: 0 auto
+			max-width: 105px
+
+.tabs
+	padding: 0
+.tab
+	&__links
+		text-align: center
+	&__link
+		display: inline-block
+		cursor: pointer
+		padding: 7px 25px
+		min-width: 200px
+		background: #2d2d2d
+		+xs_max
+			min-width: 160px
+			padding-left: 15px
+			padding-right: 15px
+		& span
+			font-size: 20px
+			@extend %ff_PFDbold
+			color: #0094d9
+			border-bottom: 1px dashed #0094d9
+			+xs_max
+				font-size: 18px
+		&.active
+			background: #f4f4f4
+			& span
+				color: #2d2d2d
+				border-color: transparent
+	&__content
+		padding: 37px 0 17px
+		background: #f4f4f4
+	&__inner
+		&>div
+			+lg_min
+				padding-left: 8px
+				padding-right: 8px
+.product
+	padding: 12px
+	border: 1px solid #e8e8e8
+	background: #fff
+	max-width: 278px
+	margin: 0 auto 20px
+	padding-bottom: 60px
+	transition: all 0.2s
+	overflow: hidden
+	position: relative
+	height: -webkit-calc(100% - 20px)
+	height:    -moz-calc(100% - 20px)
+	height:         calc(100% - 20px)	
+	&:hover
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15)
+		-moz-box-shadow:    0px 0px 15px 0px rgba(0, 0, 0, 0.15)
+		box-shadow:         0px 0px 15px 0px rgba(0, 0, 0, 0.15)
+	&__img
+		display: block
+		margin-bottom: 18px
+		& img
+			display: block
+			width: 100%
+			height: auto
+	&__title
+		display: inline-block
+		color: #0094d9
+		font-size: 20px
+		line-height: 1
+		margin-bottom: 9px
+		&:hover
+			text-decoration: underline
+	&__option
+		display: block
+		color: #2d2d2d
+		font-size: 16px
+		line-height: 1
+		margin-bottom: 11px
+	&__price
+		display: block
+		font-size: 18px
+		color: #000
+		margin-bottom: 18px
+		& span
+			font-size: 40px
+	&__btn
+		display: block
+		+position(auto,auto,18px,12px)
+		width: 50%
+		max-width: 115px
+		height: 37px
+		line-height: 35px
+		color: #fff
+		border: none
+		background: #2d2d2d
+		transition: all 0.2s
+		font-size: 14px
+		@extend %ff_PFDreg
+		padding-left: 38px
+		outline: none
+		&:hover
+			background: #4c4c4c
+		&::before
+			content: ""
+			display: block
+			+position(50%,auto,auto,8px)
+			width: 25px
+			height: 24px
+			margin-top: -12px
+			background: url(../img/ic-product-cart.png) 0 0 no-repeat	
+		+sm_max
+			width: 47%
+		+xs_max
+			width: 50%	
+	&__readmore
+		display: block
+		+position(auto,12px,18px,auto)
+		width: 48%
+		max-width: 120px
+		height: 37px
+		border: 1px solid #e8e8e8
+		text-align: center
+		line-height: 35px
+		color: #636363
+		font-size: 14px
+		transition: all 0.2s
+		&:hover
+			color: #0094d9
+		+sm_max
+			width: 42%
+		+xs_max
+			width: 48%
+.about
+	padding: 45px 0
+	& .section-title
+		margin-bottom: 27px
+	& p
+		line-height: 1.1		
+
+
+.footer
+	color: #000
+	padding: 30px 0
+	background: #f4f4f4
+	&__links
+		& ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			& li
+				& a
+					color: #4c4c4c
+					font-size: 18px
+					line-height: 30px
+					@extend %ff_PFDreg
+					&:hover
+						color: #0094d9		
+	& .logo
+		max-width: 191px
+		margin-bottom: 20px
+		& img	
+			display: block
+			width: 100%
+			height: auto				
+	&__phone
+		text-align: right
+		+md_max
+			text-align: left
+		& .phone
+			display: inline-block
+			margin-bottom: 25px
+		& .backcall
+			float: right
+			margin: 0 25px
+			+lg_max
+				margin-right: 0
+				margin-left: 10px
+				& a
+					font-size: 16px
+			+md_max
+				float: none
+				margin-bottom: 15px
+				margin-top: 15px
+				margin-left: 0		
+
+					
+
+
+		
+	
+		
+	
+

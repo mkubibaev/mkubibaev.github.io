@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'PF Din Display Pro reg';
+  src: url('PFDinDisplayProReg/PFDinDisplayProReg.eot');
+  src: url('PFDinDisplayProReg/PFDinDisplayProReg.eot') format('embedded-opentype'),
+       url('PFDinDisplayProReg/PFDinDisplayProReg.woff2') format('woff2'),
+       url('PFDinDisplayProReg/PFDinDisplayProReg.woff') format('woff'),
+       url('PFDinDisplayProReg/PFDinDisplayProReg.ttf') format('truetype'),
+       url('PFDinDisplayProReg/PFDinDisplayProReg.svg#PFDinDisplayProReg') format('svg');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'PF Din Display Pro bold';
+  src: url('PFDinDisplayProBold/PFDinDisplayProBold.eot');
+  src: url('PFDinDisplayProBold/PFDinDisplayProBold.eot') format('embedded-opentype'),
+       url('PFDinDisplayProBold/PFDinDisplayProBold.woff2') format('woff2'),
+       url('PFDinDisplayProBold/PFDinDisplayProBold.woff') format('woff'),
+       url('PFDinDisplayProBold/PFDinDisplayProBold.ttf') format('truetype'),
+       url('PFDinDisplayProBold/PFDinDisplayProBold.svg#PFDinDisplayProBold') format('svg');
+  font-weight: 700;
+}
