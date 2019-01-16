@@ -1,0 +1,475 @@
+.header
+	min-height: 134px
+	padding-top: 20px
+	color: #fff
+	font-size: 16px
+	line-height: 24px
+	background: #050706
+	+sm_max
+		padding-top: 0
+	& .logo
+		margin-top: 14px
+	& .addr
+		padding-top: 21px
+		+lg_min
+			padding-left: 5px
+		+sm_max
+			display: none	
+	& .mail
+		padding-top: 21px
+		+lg_min
+			padding-left: 35px
+		+sm_max
+			display: none
+	&__phone
+		margin-bottom: 15px
+		text-align: right
+		+xs_max
+			text-align: center
+
+.logo
+	display: block
+	max-width: 160px
+	margin-bottom: 15px
+	& img
+		display: block
+		width: 100%
+		height: auto
+.addr
+	margin-bottom: 25px									
+	line-height: 24px
+
+.mail
+	line-height: 24px
+	& span
+		position: relative
+		display: inline-block
+		padding-left: 20px
+		&::before
+			content: ""
+			display: block
+			+position(50%,auto,auto,0)
+			width: 17px
+			height: 14px
+			margin-top: -7px
+			background-image: url(../img/ics-mail.png)
+			background-repeat: no-repaeet
+		&.mail__email
+			&::before
+				background-position: 0 0
+		&.mail__icq
+			margin-right: 5px
+			&::before
+				background-position: -17px 0
+		&.mail__email.white
+			&::before
+				background-position: 0 -15px
+		&.mail__icq.white
+			&::before
+				background-position: -17px 15px		
+.phone
+	margin-bottom: 10px
+	line-height: 24px
+	+sm_max
+		padding-top: 20px
+	+xs_max
+		padding-top: 10px	
+	&__link
+		color: #fff
+		font-size: 30px
+		transition: all 0.3s
+		+lg_max
+			font-size: 26px
+		+sm_max
+			font-size: 22px			
+		&:hover
+			color: $accent-color
+		&-sm
+			color: #fff
+			font-size: 18px					
+			transition: all 0.3s			
+			&:hover
+				color: $accent-color
+.backcall
+	.main-btn
+		font-size: 14px
+		line-height: 36px
+		padding: 0 15px
+		+sm_max
+			line-height: 32px
+
+.main-nav
+	position: relative
+	min-height: 56px
+	padding: 0
+	background: $accent-color
+	&__list
+		padding: 0
+		margin: 0
+		text-align: center
+		+md_min
+			display: block!important
+		+md_max
+			+position(56px,auto,auto,0)
+			display: none
+			width: 100%
+			background: rgba(0,0,0,0.9)
+			padding: 10px 15px
+			z-index: 110	
+		& li
+			display: inline-block
+			margin: 0 -4px 0 0
+			padding-top: 6px
+			&:last-child
+				margin-right: 0
+				& a::after
+					display: none
+			+md_max
+				display: block
+				margin: 0
+				padding: 0
+			& a
+				display: block
+				font-size: 18px
+				font-weight: bold
+				line-height: 40px
+				color: #000
+				text-transform: uppercase
+				padding-left: 20px
+				padding-right: 20px
+				position: relative
+				transition: all 0.2s
+				&::after
+					content: ""
+					display: block
+					+position(50%,-5px,auto,auto)
+					width: 10px
+					height: 10px
+					margin-top: -5px
+					border-radius: 50%
+					background: rgba(0,0,0,0.15)	
+				&:hover
+					color: #fff		
+				+md_max
+					font-size: 16px
+					display: block
+					line-height: 44px
+					color: #fff
+					padding-left: 15px
+					&:hover
+						background: $accent-color
+						color: #000	
+.menu-btn
+	position: relative
+	z-index: 100
+	& > span
+		display: inline-block
+		line-height: 56px
+		margin-left: 66px
+		font-size: 16px
+	+md_min
+		display: none	
+	+md_max
+		width: 56px
+		height: 56px
+		+position(0,auto,auto,0)
+		cursor: pointer
+		background: #333
+	& i	
+		+md_max
+			display: block
+			width: 22px
+			height: 2px
+			background: #fff
+			+position(50%,auto,auto,50%)
+			margin: -1px 0 0 -11px
+			&::before, &::after
+				content: ""
+				+position(-7px,auto,auto,0)
+				display: block
+				width: 22px
+				height: 2px
+				background: #fff
+				transition: all 0.2s
+			&::after
+				top: 7px
+	&.is-active
+		& i
+			+md_max
+				background: transparent
+				&::before
+					transform: rotate(45deg)
+					top: 0
+				&::after
+					transform: rotate(-45deg)
+					top: 0
+
+.main-slider
+	width: 100%
+	height: 500px
+	position: relative
+	& .slick-list
+		height: 100%
+		width: 100%
+	& .slick-track
+		height: inherit
+		width: 100%
+	& .slick-dots
+		display: block
+		list-style: none
+		text-align: center
+		+position(auto,auto,12px,auto)
+		width: 100%
+		padding: 0
+		z-index: 11
+		& li
+			display: inline-block
+			margin: 0 4px
+			&.slick-active
+				& button
+					background: #fff
+		& button
+			font-size: 0
+			outline: none
+			padding: 0
+			width: 15px
+			height: 15px
+			border: none
+			border-radius: 50%
+			background: $accent-color						
+	.slide
+		width: 100%
+		background-size: cover
+		background-position: 50% 0
+		position: relative
+		color: #fff
+		outline: none
+		z-index: 2
+		padding-top: 88px
+		text-align: center
+		+sm_max
+			padding-top: 100px
+		&__title
+			font-weight: bold
+			font-size: 60px
+			margin: 0 0 17px
+			padding: 0
+			line-height: 1
+			text-transform: uppercase
+			+lg_max
+				font-size: 56px
+			+md_max
+				font-size: 48px
+			+sm_max
+				font-size: 40px
+			+xs_max
+				font-size: 30px			
+			& span
+				display: block	
+				font-size: 100px
+				margin-bottom: 8px
+				+lg_max
+					font-size: 86px
+				+md_max
+					font-size: 74px
+				+sm_max		
+					font-size: 60px
+				+xs_max
+					font-size: 46px	
+		&__descr
+			font-size: 24px
+			text-transform: uppercase		
+			margin-bottom: 50px
+			+md_max
+				font-size: 20px
+
+.search-form
+	width: 300px
+	margin: 0 auto
+	&__inp
+		position: relative
+		width: 100%
+		height: 50px
+		display: inline-block
+		& input
+			width: 100%
+			height: 50px
+			border: none
+			padding: 0 40px 0 15px
+			font-size: 14px
+			border: 1px solid #cdcdcd
+			border-radius: 9px
+			font-family: 'Open Sans', arial, sans-serif
+		& button
+			border: none
+			outline: none
+			+position(5px,5px,auto,auto)
+			width: 40px
+			height: 40px
+			background: url(../img/ic-search.png) 50% no-repeat
+			z-index: 11	
+
+.catalog	
+	padding: 37px 0 10px
+	& .section-title
+		margin-bottom: 22px
+	&__items
+		padding-top: 50px
+
+.catalog-item
+	display: block
+	text-align: center
+	margin: 0 auto 25px
+	height: 100%
+	&__top
+		display: block
+		position: relative
+		margin-bottom: 12px	
+	&__img
+		display: block
+		width: 160px
+		height: 160px
+		border-radius: 50%
+		margin: 0 auto
+		overflow: hidden
+		+xs_max
+			width: 140px
+			height: 140px
+		& img
+			display: block
+			width: 100%
+			height: auto
+			margin: 0 auto
+	&__num
+		display: inline-block
+		font-size: 12px
+		line-height: 32px
+		min-width: 32px
+		color: #000
+		background: $accent-color
+		border-radius: 50%
+		position: relative
+		top: -16px
+	&__txt
+		display: inline-block
+		color: #000
+		line-height: 20px
+		transition: all 0.2s
+		&:hover
+			color: $accent-color
+
+.works
+	padding: 55px 0 50px
+	text-align: center
+	background: url(../img/our-works-bg.jpg) 50% 0 no-repeat
+	background-size: cover
+	& .section-title
+		color: #fff
+		margin-bottom: 50px
+.work
+	height: 100%
+	margin-bottom: 55px
+	&__img
+		display: block
+		max-width: 250px
+		margin: 0 auto 21px
+		border: 3px solid transparent
+		transition: all 0.2s
+		&:hover
+			border-color: $accent-color
+		& img
+			display: block
+			width: 100%
+			height: auto
+	&__title
+		display: block
+		font-size: 16px
+		color: #fff
+		margin-bottom: 3px
+	&__category
+		color: $accent-color
+		border-bottom: 1px solid $accent-color
+		&:hover
+			border-color: transparent	
+
+.partners
+	padding: 55px 0 35px
+	& .section-title
+		margin-bottom: 5px	
+	&__slider
+		padding: 0 50px
+		+xs_max
+			padding: 0 40px
+	& .slick-prev
+		width: 48px
+		height: 48px
+		border: none
+		outline: none
+		overflow: hidden
+		font-size: 0
+		+position(50%,auto,auto,0)
+		margin-top: -24px
+		z-index: 98
+		cursor: pointer
+		background: url(../img/slider-arrows.png) 0 0 no-repeat
+		background-size: cover
+		&:hover
+			background-position: 0 -48px					
+	& .slick-next
+		@extend .slick-prev
+		+position(50%,0,auto,auto)
+		margin-left: auto
+		-webkit-transform: rotate(180deg)
+		-moz-transform: rotate(180deg)
+		-ms-transform: rotate(180deg)
+		-o-transform: rotate(180deg)
+		transform: rotate(180deg)
+	& .partner
+		outline: none
+		& img
+			display: block
+			margin: 0 auto
+			max-width: 158px
+
+.about
+	padding: 41px 0 30px
+	background: #f5f5f5
+	& .section-title
+		margin-bottom: 38px
+	& p
+		line-height: 24px		
+
+
+.footer
+	color: #fff
+	padding: 24px 0
+	background: #050706
+	&__links
+		padding-top: 12px
+		& ul
+			list-style-type: none
+			padding: 0
+			margin: 0 0 25px
+			& li
+				margin-bottom: 10px
+				& a
+					color: #fff
+					font-size: 14px
+					line-height: 1
+					border-bottom: 1px solid #fff
+					&:hover
+						color: $accent-color
+						border-color: $accent-color
+	& .phone
+		padding-top: 12px
+	& .copyright	
+		padding-top: 20px
+		
+					
+
+
+		
+	
+		
+	
+

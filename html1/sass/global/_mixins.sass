@@ -1,0 +1,45 @@
+=clearfix
+	&::after
+		clear: both
+		content: ""
+		display: table
+
+=flex
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex 
+
+
+=position($top,$right,$bot,$left)
+	position: absolute
+	top: $top
+	left: $left
+	right: $right
+	bottom: $bot
+
+=lg_max
+	@media(max-width: 1199px)
+		@content
+=lg_min
+	@media(min-width: 1200px)
+		@content		
+=md_max
+	@media(max-width: 991px)
+		@content
+=md_min
+	@media(min-width: 992px)
+		@content		
+=sm_max
+	@media(max-width: 767px)
+		@content
+=sm_min
+	@media(min-width: 768px)
+		@content		
+=xs_max
+	@media(max-width: 575px)
+		@content		
+=xs_min
+	@media(min-width: 576px)
+		@content	
