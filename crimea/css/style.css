@@ -213,19 +213,109 @@ a {
     -webkit-clip-path: none;
   }
 }
-.map__img {
+.map__markers {
+  position: relative;
   max-width: 560px;
+  height: auto;
 }
-.map__img img {
+.map__markers img {
   display: block;
   width: 100%;
   height: auto;
 }
+.map__marker {
+  position: absolute;
+  width: 22px;
+  height: 34px;
+  left: 50%;
+  top: 50%;
+  margin-left: -11px;
+  margin-top: -34px;
+  cursor: pointer;
+  background-image: url("../img/marker.svg");
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.map__marker.active {
+  width: 40px;
+  height: 60px;
+  margin-left: -20px;
+  margin-top: -60px;
+  background-image: url("../img/marker-active.svg");
+}
+.map__marker.pzar {
+  top: 300px;
+  left: 273px;
+}
+.map__marker.prev {
+  top: 270px;
+  left: 310px;
+}
+.map__marker.pman {
+  top: 250px;
+  left: 250px;
+}
+.map__marker.nikb {
+  top: 150px;
+  left: 250px;
+}
+.map__marker.pgor {
+  top: 150px;
+  left: 300px;
+}
+.map__marker.psok {
+  top: 150px;
+  left: 350px;
+}
+.map__marker.ulprof {
+  top: 150px;
+  left: 400px;
+}
+.map__marker.bdmi {
+  top: 400px;
+  left: 100px;
+}
+.map__marker.bore {
+  top: 400px;
+  left: 150px;
+}
+.map__marker.ulgor {
+  top: 400px;
+  left: 200px;
+}
+.map__marker.pslav {
+  top: 400px;
+  left: 250px;
+}
+.map__marker.ulmit {
+  top: 400px;
+  left: 300px;
+}
 .map__list {
   color: #fff;
-  padding: 40px 0;
+  padding: 50px 10px 15px;
   margin: 0;
   list-style-type: none;
+}
+.map__list li {
+  margin-bottom: 3px;
+}
+.map__list li span {
+  display: inline-block;
+  font-size: 20px;
+  padding: 3px 30px 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.map__list li span:hover {
+  color: #faaf40;
+}
+.map__list li.active span {
+  background: #faaf40;
+}
+.map__list li.active span:hover {
+  color: #fff;
 }
 
 .plans {
