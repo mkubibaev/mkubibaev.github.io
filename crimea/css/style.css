@@ -292,6 +292,10 @@ a {
   top: 400px;
   left: 300px;
 }
+.map__marker.ptver {
+  top: 400px;
+  left: 350px;
+}
 .map__list {
   color: #fff;
   padding: 50px 10px 15px;
@@ -301,20 +305,21 @@ a {
 .map__list li {
   margin-bottom: 3px;
 }
-.map__list li span {
+.map__list li a {
   display: inline-block;
   font-size: 20px;
   padding: 3px 30px 5px 10px;
   cursor: pointer;
+  color: #fff;
   transition: all 0.2s;
 }
-.map__list li span:hover {
+.map__list li a:hover {
   color: #faaf40;
 }
-.map__list li.active span {
+.map__list li.active a {
   background: #faaf40;
 }
-.map__list li.active span:hover {
+.map__list li.active a:hover {
   color: #fff;
 }
 
@@ -323,7 +328,8 @@ a {
 }
 
 .plan {
-  margin-bottom: 50px;
+  padding-top: 20px;
+  margin-bottom: 30px;
 }
 @media (max-width: 991px) {
   .plan {
