@@ -227,6 +227,36 @@ a {
   background: url("../img/map-bg.png") 0 0 no-repeat;
   background-size: cover;
 }
+@media (max-width: 1199px) {
+  .map::before {
+    width: 920px;
+    margin-left: -783px;
+  }
+}
+@media (max-width: 991px) {
+  .map::before {
+    left: 50%;
+    top: 0;
+    background: url("../img/map-bg-sm.png") 0 0 no-repeat;
+    background-size: cover;
+    height: 560px;
+    width: 150%;
+    margin-top: -10px;
+    margin-left: -731px;
+  }
+}
+@media (max-width: 767px) {
+  .map::before {
+    margin-left: -640px;
+  }
+}
+@media (max-width: 575px) {
+  .map::before {
+    width: 1200px;
+    margin-left: -364px;
+    left: 0;
+  }
+}
 .map__left {
   position: relative;
   max-width: 560px;
@@ -329,6 +359,11 @@ a {
   margin: 0;
   list-style-type: none;
 }
+@media (max-width: 991px) {
+  .map__list {
+    padding-top: 20px;
+  }
+}
 .map__list li {
   margin-bottom: 3px;
 }
@@ -416,6 +451,13 @@ a {
   cursor: pointer;
   background: #902c66;
   display: none;
+  z-index: 11;
+}
+@media (max-width: 991px) {
+  #scrollTop {
+    right: 10px;
+    bottom: 15px;
+  }
 }
 #scrollTop::before {
   content: "";
